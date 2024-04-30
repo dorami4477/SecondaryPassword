@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainView: UIView {
+final class MainView: UIView {
     private let textLabel:UILabel = {
         let label = UILabel()
         label.text = "서비스 접속 성공"

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginView: UIView {
+final class LoginView: UIView {
     // MARK: - UI변수 선언
     private lazy var textFieldStackView: UIStackView = {
         let stview = UIStackView(arrangedSubviews: [idTextFieldView, pwTextFieldView, warningLabel, loginButton])

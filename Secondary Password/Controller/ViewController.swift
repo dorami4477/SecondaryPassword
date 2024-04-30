@@ -7,9 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
-    let loginView = LoginView()
+    private let loginView = LoginView()
 
     override func loadView() {
         view = loginView
@@ -42,7 +42,6 @@ class ViewController: UIViewController {
                 present(mainVC, animated: true, completion: nil)
                 
             }else{
-                print("\(idText)&\(pwText)")
                 loginView.warningLabel.text = "패스워드가 일치하지 않습니다"
             }
         }else{

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class KeyBoardView:UIView{
+final class KeyBoardView:UIView{
     
     var mainText:UILabel = {
         let label = UILabel()
@@ -16,7 +16,7 @@ class KeyBoardView:UIView{
         label.textColor = .white
         return label
     }()
-    var mainText02:UILabel = {
+    private let mainText02:UILabel = {
         let label = UILabel()
         label.text = "숫자 4자리 + 영문자 1자리"
         label.font = UIFont.systemFont(ofSize: 13)
@@ -28,7 +28,7 @@ class KeyBoardView:UIView{
     var pwCircle1:UIView = UIView()
     var pwCircle2:UIView = UIView()
     var pwCircle3:UIView = UIView()
-    var pwCircle4:UILabel = UILabel()
+    let pwCircle4:UILabel = UILabel()
     var pwCircle5:UIView = UIView()
     
     //비번 입력 키보드
@@ -65,7 +65,7 @@ class KeyBoardView:UIView{
     lazy var keyButtons:[UIButton] = [keyButtton0, keyButtton1,keyButtton2,keyButtton3,keyButtton4,keyButtton5,keyButtton6,keyButtton7,keyButtton8, keyButtton9,keyButtton10, keyButtton11,keyButtton12,keyButtton13,keyButtton14,keyButtton15,keyButtton16,keyButtton17,keyButtton18, keyButtton19,keyButtton20, keyButtton21,keyButtton22,keyButtton23,keyButtton24,keyButtton25]
     
     //스택뷰
-    lazy var textStactView:UIStackView = {
+    private lazy var textStactView:UIStackView = {
         let stview = UIStackView(arrangedSubviews: [mainText, mainText02, pWstackView])
         stview.spacing = 5
         stview.axis = .vertical
@@ -74,7 +74,7 @@ class KeyBoardView:UIView{
         return stview
     }()
     
-    lazy var pWstackView:UIStackView = {
+    private lazy var pWstackView:UIStackView = {
         let stview = UIStackView(arrangedSubviews: [pwCircle0, pwCircle1, pwCircle2, pwCircle3, pwCircle4, pwCircle5])
         stview.spacing = 5
         stview.axis = .horizontal
@@ -84,7 +84,7 @@ class KeyBoardView:UIView{
     }()
     
     
-    lazy var stackViewRow1:UIStackView = {
+    private lazy var stackViewRow1:UIStackView = {
         let stview = UIStackView(arrangedSubviews: [keyButtton0, keyButtton1, keyButtton2,keyButtton3, keyButtton4, keyButtton5, keyButtton6])
         stview.spacing = 10
         stview.axis = .horizontal
@@ -93,7 +93,7 @@ class KeyBoardView:UIView{
         return stview
     }()
     
-    lazy var stackViewRow2:UIStackView = {
+    private lazy var stackViewRow2:UIStackView = {
         let stview = UIStackView(arrangedSubviews: [keyButtton7, keyButtton8, keyButtton9,keyButtton10, keyButtton11, keyButtton12, keyButtton13])
         stview.spacing = 10
         stview.axis = .horizontal
@@ -102,7 +102,7 @@ class KeyBoardView:UIView{
         return stview
     }()
     
-    lazy var stackViewRow3:UIStackView = {
+    private lazy var stackViewRow3:UIStackView = {
         let stview = UIStackView(arrangedSubviews: [keyButtton14, keyButtton15, keyButtton16,keyButtton17, keyButtton18, keyButtton19, keyButtton20])
         stview.spacing = 10
         stview.axis = .horizontal
@@ -111,7 +111,7 @@ class KeyBoardView:UIView{
         return stview
     }()
     
-    lazy var stackViewRow4:UIStackView = {
+    private lazy var stackViewRow4:UIStackView = {
         let stview = UIStackView(arrangedSubviews: [keyButtton21, keyButtton22, keyButtton23,keyButtton24, keyButtton25, keyButtton26])
         stview.spacing = 10
         stview.axis = .horizontal
@@ -120,7 +120,7 @@ class KeyBoardView:UIView{
         return stview
     }()
     
-    lazy var allWrapStackView:UIStackView = {
+    private lazy var allWrapStackView:UIStackView = {
         let stview = UIStackView(arrangedSubviews: [stackViewRow1, stackViewRow2, stackViewRow3, stackViewRow4])
         stview.spacing = 10
         stview.axis = .vertical
@@ -141,11 +141,21 @@ class KeyBoardView:UIView{
         setupAutoLayout()
         setButtonLabel(checkNumOrAlphbat:true)
     }
+    
+    
+    override func layoutSubviews(){
+        super.layoutSubviews()
+        pwCircles.forEach { circle in
+            circle.layer.cornerRadius = circle.bounds.width / 2
+            circle.clipsToBounds = true
+        }
+    }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //UI셋팅
     func setupUI(){
         backgroundColor = UIColor(red: 0.10, green: 0.13, blue: 0.21, alpha: 1.00)
         [textStactView, allWrapStackView].forEach{addSubview($0)}

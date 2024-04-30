@@ -7,10 +7,10 @@
 
 import UIKit
 
-class MyKeyBoardViewController: UIViewController {
+final class MyKeyBoardViewController: UIViewController {
     
-    let keyBoardView = KeyBoardView()
-    var secondaryPW:[String] = []
+    private let keyBoardView = KeyBoardView()
+    private var secondaryPW:[String] = []
     var uerID:String = ""
     
     //view
@@ -24,13 +24,6 @@ class MyKeyBoardViewController: UIViewController {
         buttonTapped()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        keyBoardView.pwCircles.forEach { circle in
-            circle.layer.cornerRadius = circle.bounds.width / 2
-            circle.clipsToBounds = true
-        }
-    }
     
     //버튼 눌렀을때 이벤트
     func buttonTapped(){
