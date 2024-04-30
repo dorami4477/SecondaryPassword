@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF48DFDA2BE0B4EA00F80853 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48DFD92BE0B4EA00F80853 /* MainView.swift */; };
 		AF5860852BDCC26500F7FBA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5860842BDCC26500F7FBA9 /* AppDelegate.swift */; };
 		AF5860872BDCC26500F7FBA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5860862BDCC26500F7FBA9 /* SceneDelegate.swift */; };
 		AF5860892BDCC26500F7FBA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5860882BDCC26500F7FBA9 /* ViewController.swift */; };
 		AF58608C2BDCC26500F7FBA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF58608A2BDCC26500F7FBA9 /* Main.storyboard */; };
 		AF58608E2BDCC26600F7FBA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF58608D2BDCC26600F7FBA9 /* Assets.xcassets */; };
 		AF5860912BDCC26600F7FBA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF58608F2BDCC26600F7FBA9 /* LaunchScreen.storyboard */; };
+		AF5860992BDCD6A400F7FBA9 /* Accounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5860982BDCD6A400F7FBA9 /* Accounts.swift */; };
+		AF58609B2BDCECED00F7FBA9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58609A2BDCECED00F7FBA9 /* MainViewController.swift */; };
+		AF58609E2BDCF0F800F7FBA9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58609D2BDCF0F800F7FBA9 /* LoginView.swift */; };
+		AF5860A02BDCF6A400F7FBA9 /* MyKeyBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58609F2BDCF6A400F7FBA9 /* MyKeyBoardViewController.swift */; };
+		AF5860A32BDD003C00F7FBA9 /* KeyBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5860A22BDD003C00F7FBA9 /* KeyBoardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF48DFD92BE0B4EA00F80853 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AF5860812BDCC26500F7FBA9 /* Secondary Password.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Secondary Password.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5860842BDCC26500F7FBA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF5860862BDCC26500F7FBA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,11 @@
 		AF58608D2BDCC26600F7FBA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF5860902BDCC26600F7FBA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF5860922BDCC26600F7FBA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF5860982BDCD6A400F7FBA9 /* Accounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accounts.swift; sourceTree = "<group>"; };
+		AF58609A2BDCECED00F7FBA9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AF58609D2BDCF0F800F7FBA9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AF58609F2BDCF6A400F7FBA9 /* MyKeyBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeyBoardViewController.swift; sourceTree = "<group>"; };
+		AF5860A22BDD003C00F7FBA9 /* KeyBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF48DFD82BE0B4AE00F80853 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF5860982BDCD6A400F7FBA9 /* Accounts.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		AF5860782BDCC26500F7FBA9 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +76,37 @@
 		AF5860832BDCC26500F7FBA9 /* Secondary Password */ = {
 			isa = PBXGroup;
 			children = (
+				AF48DFD82BE0B4AE00F80853 /* Model */,
+				AF5860A12BDCF6AB00F7FBA9 /* Controller */,
+				AF58609C2BDCF0A700F7FBA9 /* View */,
 				AF5860842BDCC26500F7FBA9 /* AppDelegate.swift */,
 				AF5860862BDCC26500F7FBA9 /* SceneDelegate.swift */,
-				AF5860882BDCC26500F7FBA9 /* ViewController.swift */,
 				AF58608A2BDCC26500F7FBA9 /* Main.storyboard */,
 				AF58608D2BDCC26600F7FBA9 /* Assets.xcassets */,
 				AF58608F2BDCC26600F7FBA9 /* LaunchScreen.storyboard */,
 				AF5860922BDCC26600F7FBA9 /* Info.plist */,
 			);
 			path = "Secondary Password";
+			sourceTree = "<group>";
+		};
+		AF58609C2BDCF0A700F7FBA9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF58609D2BDCF0F800F7FBA9 /* LoginView.swift */,
+				AF5860A22BDD003C00F7FBA9 /* KeyBoardView.swift */,
+				AF48DFD92BE0B4EA00F80853 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF5860A12BDCF6AB00F7FBA9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF5860882BDCC26500F7FBA9 /* ViewController.swift */,
+				AF58609F2BDCF6A400F7FBA9 /* MyKeyBoardViewController.swift */,
+				AF58609A2BDCECED00F7FBA9 /* MainViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +180,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF58609E2BDCF0F800F7FBA9 /* LoginView.swift in Sources */,
+				AF48DFDA2BE0B4EA00F80853 /* MainView.swift in Sources */,
+				AF5860A32BDD003C00F7FBA9 /* KeyBoardView.swift in Sources */,
+				AF5860A02BDCF6A400F7FBA9 /* MyKeyBoardViewController.swift in Sources */,
 				AF5860892BDCC26500F7FBA9 /* ViewController.swift in Sources */,
+				AF5860992BDCD6A400F7FBA9 /* Accounts.swift in Sources */,
 				AF5860852BDCC26500F7FBA9 /* AppDelegate.swift in Sources */,
 				AF5860872BDCC26500F7FBA9 /* SceneDelegate.swift in Sources */,
+				AF58609B2BDCECED00F7FBA9 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
